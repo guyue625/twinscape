@@ -51,13 +51,13 @@ viewer.on('select', (part) => {
   selected.textContent = part?.name.toUpperCase() ?? '—'
   renderLabels(viewer.getParts())
 })
-viewer.on('load:start', () => { status.textContent = 'LOADING' })
+viewer.on('load:start', () => { status.textContent = '加载中' })
 viewer.on('load:progress', ({ progress }) => {
-  status.textContent = progress ? `${Math.round(progress * 100)}%` : 'LOADING'
+  status.textContent = progress ? `${Math.round(progress * 100)}%` : '加载中'
 })
-viewer.on('load:end', () => { status.textContent = 'READY' })
+viewer.on('load:end', () => { status.textContent = '就绪' })
 viewer.on('load:error', ({ error }) => {
-  if (!(error instanceof Error && error.name === 'AbortError')) status.textContent = 'ERROR'
+  if (!(error instanceof Error && error.name === 'AbortError')) status.textContent = '加载失败'
 })
 
 function createFallbackModel(): Group {
@@ -67,24 +67,24 @@ function createFallbackModel(): Group {
   const orange = new MeshStandardMaterial({ color: '#d94b1b', roughness: 0.52, metalness: 0.25 })
 
   const pump = new Mesh(new CylinderGeometry(0.75, 0.9, 1.9, 32), graphite)
-  pump.name = 'Pump body'
+  pump.name = '泵体'
   pump.rotation.z = Math.PI / 2
   root.add(pump)
 
   const motor = new Mesh(new CylinderGeometry(0.62, 0.62, 1.6, 32), steel)
-  motor.name = 'Drive motor'
+  motor.name = '驱动电机'
   motor.rotation.z = Math.PI / 2
   motor.position.x = -1.65
   root.add(motor)
 
   const valve = new Mesh(new TorusGeometry(0.42, 0.08, 12, 32), orange)
-  valve.name = 'Control valve'
+  valve.name = '控制阀'
   valve.rotation.x = Math.PI / 2
   valve.position.set(0.45, 1.12, 0)
   root.add(valve)
 
   const base = new Mesh(new BoxGeometry(4.2, 0.22, 1.65), graphite.clone())
-  base.name = 'Mounting skid'
+  base.name = '安装底座'
   base.position.y = -1.02
   root.add(base)
   return root
@@ -99,7 +99,7 @@ form.addEventListener('submit', async (event) => {
   const url = urlInput.value.trim()
   if (!url) {
     viewer.setModel(createFallbackModel())
-    status.textContent = 'FALLBACK'
+    status.textContent = '内置模型'
     return
   }
   try {

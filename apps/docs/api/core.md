@@ -1,34 +1,34 @@
-# Core API
+# 核心 API
 
 ## `createTwinViewer(container, options?)`
 
-Creates and starts a `TwinViewer`. The container can be an `HTMLElement` or a selector.
+创建并启动 `TwinViewer`。容器可以是 `HTMLElement` 或 CSS 选择器。
 
-## Model lifecycle
+## 模型生命周期
 
-- `load(url, options?)` loads GLB/GLTF and returns its root `Object3D`.
-- `setModel(object)` installs an existing `Object3D`.
-- `clear()` removes the current model and disposes its resources.
-- `dispose()` permanently tears down the viewer. It is safe to call more than once.
+- `load(url, options?)` 加载 GLB/GLTF，并返回模型根 `Object3D`。
+- `setModel(object)` 安装已有的 `Object3D`。
+- `clear()` 移除当前模型并释放其资源。
+- `dispose()` 永久销毁查看器；重复调用是安全的。
 
-## Parts and selection
+## 部件与选择
 
-- `getParts()` returns all indexed part metadata.
-- `getPart(id)` returns one part.
-- `getObject(id)` returns the underlying Three.js object.
-- `select(id | null)` changes selection and returns whether the id was valid.
-- `getSelectedId()` and `getSelectedPart()` read selection.
+- `getParts()` 返回所有已索引部件的元数据。
+- `getPart(id)` 返回指定部件。
+- `getObject(id)` 返回底层 Three.js 对象。
+- `select(id | null)` 更改选择，并返回 id 是否有效。
+- `getSelectedId()` 和 `getSelectedPart()` 用于读取当前选择。
 
-## Camera and output
+## 相机与输出
 
-- `focusOn(id)` frames a part and returns whether it could be framed.
-- `resetCamera()` restores the configured camera.
-- `screenshot(type?, quality?)` returns a data URL.
+- `focusOn(id)` 将相机对准部件，并返回操作是否成功。
+- `resetCamera()` 恢复配置中的初始相机状态。
+- `screenshot(type?, quality?)` 返回截图 Data URL。
 
-## Events
+## 事件
 
-`load:start`, `load:progress`, `load:end`, `load:error`, `resize`, `parts:update`, and `select` are available through `on()` and `off()`.
+可通过 `on()` 和 `off()` 使用 `load:start`、`load:progress`、`load:end`、`load:error`、`resize`、`parts:update` 和 `select` 事件。
 
-## Native objects
+## 原生对象
 
-`scene`, `camera`, `renderer`, and `controls` are public read-only properties.
+`scene`、`camera`、`renderer` 和 `controls` 均为公开只读属性。

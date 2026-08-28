@@ -1,12 +1,12 @@
-# 快速开始
+# Getting started
 
-安装核心包及其 Three.js 对等依赖：
+Install the core package and its Three.js peer dependency:
 
 ```bash
 pnpm add @twinscape/core three
 ```
 
-为查看器准备一个具有明确尺寸的容器，然后加载 GLB 或 GLTF 模型。
+Give the viewer a container with an explicit size, then load a GLB or GLTF model.
 
 ```ts
 import { createTwinViewer } from '@twinscape/core'
@@ -26,4 +26,4 @@ viewer.on('select', (part) => {
 }
 ```
 
-宿主页面被永久移除时，请调用 `viewer.dispose()` 释放查看器及其资源。
+Call `viewer.dispose()` when the host screen is permanently removed.

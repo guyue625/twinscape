@@ -1,7 +1,7 @@
-# Changelog
+# 更新日志
 
 ## 0.0.0
 
-- Initial core viewer package scaffold.
-- Vanilla Three.js example.
-- Documentation scaffold.
+- 初始核心查看器包结构。
+- Vanilla Three.js 示例。
+- 文档站基础结构。

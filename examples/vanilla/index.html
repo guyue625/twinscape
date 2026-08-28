@@ -1,48 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101917" />
-    <title>Twinscape · Core Viewer</title>
+    <title>Twinscape · 核心查看器</title>
   </head>
   <body>
     <main class="shell">
       <header class="masthead">
-        <a class="wordmark" href="#" aria-label="Twinscape home">
+        <a class="wordmark" href="#" aria-label="Twinscape 首页">
           <span class="wordmark-mark">T/S</span>
           <span>TWINSCAPE</span>
         </a>
-        <div class="build-tag"><span></span> CORE / V0.1</div>
+        <div class="build-tag"><span></span> 核心 / V0.1</div>
       </header>
 
       <section class="viewer-grid">
         <aside class="intro-panel">
-          <p class="eyebrow">DIGITAL TWIN TOOLKIT</p>
-          <h1>Machines,<br /><em>made legible.</em></h1>
-          <p class="lede">A framework-free Three.js viewer with loading, part indexing, labels, picking and lifecycle management built in.</p>
+          <p class="eyebrow">数字孪生工具包</p>
+          <h1>让设备，<br /><em>清晰可读。</em></h1>
+          <p class="lede">与框架无关的 Three.js 查看器，内置模型加载、部件索引、标签投影、拾取及完整生命周期管理。</p>
 
           <form id="model-form" class="load-form">
-            <label for="model-url">GLB / GLTF SOURCE</label>
+            <label for="model-url">GLB / GLTF 模型地址</label>
             <div class="input-row">
               <input id="model-url" type="url" placeholder="https://…/model.glb" />
-              <button type="submit">LOAD</button>
+              <button type="submit">加载</button>
             </div>
           </form>
 
           <dl class="telemetry">
-            <div><dt>STATUS</dt><dd id="status">READY</dd></div>
-            <div><dt>PARTS</dt><dd id="part-count">00</dd></div>
-            <div><dt>SELECTED</dt><dd id="selected-name">—</dd></div>
+            <div><dt>状态</dt><dd id="status">就绪</dd></div>
+            <div><dt>部件</dt><dd id="part-count">00</dd></div>
+            <div><dt>已选择</dt><dd id="selected-name">—</dd></div>
           </dl>
         </aside>
 
         <div class="stage-wrap">
           <div class="corner corner-a"></div><div class="corner corner-b"></div>
-          <div id="stage" aria-label="Interactive 3D model viewer"></div>
+          <div id="stage" aria-label="交互式三维模型查看器"></div>
           <div id="labels" class="labels" aria-hidden="true"></div>
-          <div class="stage-note"><b>01</b> DRAG TO ORBIT · SCROLL TO ZOOM · SELECT A PART</div>
-          <button id="reset-view" class="reset-button" type="button">RESET VIEW</button>
+          <div class="stage-note"><b>01</b> 拖动旋转 · 滚轮缩放 · 点击选择部件</div>
+          <button id="reset-view" class="reset-button" type="button">重置视角</button>
         </div>
       </section>
     </main>

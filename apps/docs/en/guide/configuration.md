@@ -1,6 +1,6 @@
-# 配置
+# Configuration
 
-所有配置项均为可选，并按照职责分组。
+All options are optional and grouped by responsibility.
 
 ```ts
 const viewer = createTwinViewer('#stage', {
@@ -15,4 +15,4 @@ const viewer = createTwinViewer('#stage', {
 })
 ```
 
-将 `lights.ambient` 或 `lights.directional` 设为 `false`，即可关闭对应光源。
+Set `lights.ambient` or `lights.directional` to `false` to disable that light.

@@ -1,8 +1,8 @@
-# Examples
+# 示例
 
-The repository includes `examples/vanilla`, a complete browser demo with a generated pump model. It demonstrates labels, pointer selection, camera reset, loading an optional remote model, and cleanup.
+仓库中的 `examples/vanilla` 是一个完整的浏览器示例，内置自动生成的泵组模型。它展示了标签、指针选择、相机复位、远程模型加载和资源清理。
 
-Run it from the repository root:
+在仓库根目录运行：
 
 ```bash
 pnpm dev
