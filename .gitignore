@@ -6,3 +6,5 @@ dist/
 .idea/
 .vscode/
 *.tgz
+.pnpm-store/
+**/.vitepress/.temp/

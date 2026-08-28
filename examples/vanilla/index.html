@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101917" />
+    <title>Twinscape · Core Viewer</title>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <a class="wordmark" href="#" aria-label="Twinscape home">
+          <span class="wordmark-mark">T/S</span>
+          <span>TWINSCAPE</span>
+        </a>
+        <div class="build-tag"><span></span> CORE / V0.1</div>
+      </header>
+
+      <section class="viewer-grid">
+        <aside class="intro-panel">
+          <p class="eyebrow">DIGITAL TWIN TOOLKIT</p>
+          <h1>Machines,<br /><em>made legible.</em></h1>
+          <p class="lede">A framework-free Three.js viewer with loading, part indexing, labels, picking and lifecycle management built in.</p>
+
+          <form id="model-form" class="load-form">
+            <label for="model-url">GLB / GLTF SOURCE</label>
+            <div class="input-row">
+              <input id="model-url" type="url" placeholder="https://…/model.glb" />
+              <button type="submit">LOAD</button>
+            </div>
+          </form>
+
+          <dl class="telemetry">
+            <div><dt>STATUS</dt><dd id="status">READY</dd></div>
+            <div><dt>PARTS</dt><dd id="part-count">00</dd></div>
+            <div><dt>SELECTED</dt><dd id="selected-name">—</dd></div>
+          </dl>
+        </aside>
+
+        <div class="stage-wrap">
+          <div class="corner corner-a"></div><div class="corner corner-b"></div>
+          <div id="stage" aria-label="Interactive 3D model viewer"></div>
+          <div id="labels" class="labels" aria-hidden="true"></div>
+          <div class="stage-note"><b>01</b> DRAG TO ORBIT · SCROLL TO ZOOM · SELECT A PART</div>
+          <button id="reset-view" class="reset-button" type="button">RESET VIEW</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

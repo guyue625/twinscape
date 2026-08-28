@@ -1,0 +1,42 @@
+{
+  "name": "@twinscape/core",
+  "version": "0.0.0",
+  "description": "Framework-agnostic Three.js digital twin viewer core",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "three": "^0.185.0"
+  },
+  "dependencies": {
+    "@types/three": "0.185.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "jsdom": "26.1.0",
+    "three": "0.185.0",
+    "tsup": "8.5.0",
+    "vitest": "3.2.4"
+  }
+}

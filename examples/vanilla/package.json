@@ -1,0 +1,21 @@
+{
+  "name": "@twinscape/vanilla-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "pnpm --filter @twinscape/core build",
+    "dev": "vite",
+    "prebuild": "pnpm --filter @twinscape/core build",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@twinscape/core": "workspace:*",
+    "three": "0.185.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.185.0",
+    "typescript": "5.9.2",
+    "vite": "7.1.3"
+  }
+}

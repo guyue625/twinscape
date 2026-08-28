@@ -2,17 +2,16 @@
   "name": "twinscape",
   "version": "0.0.0",
   "private": true,
-  "description": "与业务、框架解耦的数字孪生渲染库",
+  "description": "Framework-agnostic digital twin rendering toolkit",
   "packageManager": "pnpm@10.17.0",
   "scripts": {
     "build": "pnpm -r --filter \"./packages/*\" run build",
-    "dev": "pnpm -r --parallel --filter \"./packages/*\" run dev",
-    "typecheck": "pnpm -r --filter \"./packages/*\" run typecheck",
-    "clean": "pnpm -r --filter \"./packages/*\" exec rimraf dist"
+    "dev": "pnpm --filter @twinscape/vanilla-example dev",
+    "docs:dev": "pnpm --filter @twinscape/docs dev",
+    "test": "pnpm -r --filter \"./packages/*\" run test",
+    "typecheck": "pnpm -r --filter \"./packages/*\" run typecheck"
   },
   "devDependencies": {
-    "rimraf": "6.0.1",
-    "tsup": "8.5.0",
     "typescript": "5.9.2"
   },
   "engines": {
