@@ -21,6 +21,7 @@ export default defineConfig({
             items: [
               { text: '快速开始', link: '/guide/getting-started' },
               { text: '核心概念', link: '/guide/core-concepts' },
+              { text: '能力矩阵', link: '/guide/capability-matrix' },
               { text: '配置', link: '/guide/configuration' },
             ],
           },
@@ -85,6 +86,7 @@ export default defineConfig({
             items: [
               { text: 'Getting started', link: '/en/guide/getting-started' },
               { text: 'Core concepts', link: '/en/guide/core-concepts' },
+              { text: 'Capability matrix', link: '/en/guide/capability-matrix' },
               { text: 'Configuration', link: '/en/guide/configuration' },
             ],
           },
