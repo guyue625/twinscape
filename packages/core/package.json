@@ -1,7 +1,29 @@
 {
   "name": "@twinscape/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Framework-agnostic Three.js digital twin viewer core",
+  "license": "MIT",
+  "author": "Lin",
+  "homepage": "https://github.com/guyue625/twinscape#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guyue625/twinscape.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/guyue625/twinscape/issues"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "digital-twin",
+    "3d",
+    "webgl",
+    "viewer",
+    "gltf",
+    "glb"
+  ],
+  "sideEffects": false,
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -21,10 +43,14 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run typecheck && pnpm run test && pnpm run build"
   },
   "peerDependencies": {
     "three": "^0.185.0"
